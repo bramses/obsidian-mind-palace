@@ -39,19 +39,6 @@ var createScene = function () {
   // Default intensity is 1. Let's dim the light a small amount
   light.intensity = 1.1;
 
-  // Our built-in 'sphere' shape.
-  var sphere = BABYLON.MeshBuilder.CreateSphere(
-    "sphere",
-    { diameter: 1.5, segments: 32 },
-    scene
-  );
-
-  // Move the sphere upward 1/2 its height
-  sphere.position.y = 9.2;
-  sphere.position.x = 3
-
-
-
   // Our built-in 'ground' shape.
   var ground = BABYLON.MeshBuilder.CreateGround(
     "ground",
@@ -117,7 +104,6 @@ var createScene = function () {
 
   //finally, say which mesh will be collisionable
   ground.checkCollisions = true;
-  sphere.checkCollisions = true;
   leftWall.checkCollisions = true;
   frontWall.checkCollisions = true;
   rightWall.checkCollisions = true;
